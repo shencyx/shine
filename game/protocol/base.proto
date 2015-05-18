@@ -1,0 +1,63 @@
+//基本协议
+
+package base;
+
+//登陆游戏服
+message Login
+{
+	required int64 roleId = 1;
+	required string token = 2;
+}
+
+message Role  //角色信息
+{
+	required int64 roleId = 1;
+	required string name = 2;
+	required int32 occ = 3;
+	required int32 gender = 4;
+	required int32 camp = 5;
+	required int32 level = 6;
+}
+
+message LoginR
+{
+	required int32 err = 1;
+	optional Role role = 2;
+}
+
+message Ping
+{
+	required uint32 time = 1;
+}
+
+message EnterScene
+{
+	required int32 sceneId = 1;
+}
+
+message EnterSceneR
+{
+	required int32 sceneId = 1;
+	required int32 x = 2;
+	required int32 y = 3;
+}
+
+//入屏
+message EnterScreen
+{
+	required int64 roleId = 1;
+}
+
+//离屏
+message LeaveScreen
+{
+	required int64 roleId = 1;
+}
+
+//更新坐标
+message UpdatePos
+{
+	required int64 roleId = 1;
+	required int32 x = 2;
+	required int32 y = 3;
+}

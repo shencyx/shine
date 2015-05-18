@@ -1,0 +1,81 @@
+
+package login;
+
+//注册账号
+message Regist
+{
+	required string account = 1;	//账号
+	required string platform = 2;   //平台号
+	required string area = 3; 		//区号
+	required string password = 4; 	//密码
+}
+
+message RegistR
+{
+	required int32 err = 1;			//错误码
+
+}
+
+
+//登陆
+message Login
+{
+	required string account = 1;	//账号
+	required string platform = 2;   //平台号
+	required string area = 3; 		//区号
+	required string password = 4; 	//密码
+}
+
+message LoginR
+{
+	required int32 err = 1;			//错误码
+	
+}
+
+message Role
+{
+	required int64 roleId = 1;
+	required string name = 2;
+	required int32 occ = 3;
+	required int32 gender = 4;
+	required int32 camp = 5;
+	required int32 level = 6;
+}
+
+//获取角色
+message GetRole
+{
+	
+}
+
+message GetRoleR
+{
+	required int32 err = 1;			//错误码
+	repeated Role roleList = 2;
+}
+
+//创建角色
+message CreateRole
+{
+	required Role role = 1;			
+}
+
+message CreateRoleR
+{
+	required int32 err = 1;			//错误码
+	optional Role role = 2;	
+}
+
+//进入某个角色
+message Entry
+{
+	required int64 roleId = 1;
+}
+
+message EntryR
+{
+	required int32 err = 1;
+	required string ip = 2;
+	required int32 port = 3;
+	required string token = 4;
+}

@@ -1,0 +1,27 @@
+//背包协议
+
+package bag;
+
+//登陆游戏服
+message GetBag
+{
+
+}
+
+//物品
+message Item
+{
+	required uint32 id = 1;
+	required string name = 2;
+	required int32 type = 3;
+}
+
+//背包信息
+message Bag 
+{
+	required int32 size = 1;
+	repeated Item name = 2;
+}
+
+
+

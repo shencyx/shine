@@ -1,0 +1,11 @@
+project_name = "login"
+thread = 2
+--logger = project_name.."/blue.log"
+logger = nil
+harbor = 0
+start = "main"
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+luaservice = "./service/?.lua;./"..project_name.."/?.lua"
+lualoader = "lualib/loader.lua"
+cpath = "./cservice/?.so"
+snax = "./"..project_name.."/?.lua"

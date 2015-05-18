@@ -1,0 +1,38 @@
+
+package Account;
+
+//连接登陆服
+message Verify
+{
+	required string account = 1;	//账号
+	required string verifyKey = 2;  //登录验证字符串
+	required int32 serverId = 3; 	//登陆服务器id
+}
+
+message VerifyBack
+{
+	required int64 roleId = 1;	//
+	required string ip = 2;  	
+	required int32 port = 3; 	
+}
+
+//登陆游戏服
+message Login
+{
+	required int64 roleId = 1;	//
+	required int32 serverId = 2; 	//游戏服务器id
+	required string token = 3;		//
+}
+
+message LoginBack  //角色信息
+{
+	required int64 roleId = 1;
+	required string name = 2;
+	required int32 occ = 3;
+	required int32 gender = 4;
+	required int32 camp = 5;
+	required int32 level = 6;
+}
+
+
+

@@ -1,0 +1,79 @@
+package util;
+
+message Int
+{
+	required int32 int = 1;
+}
+
+message Uint
+{
+	required uint32 uint = 1;
+}
+
+message Double
+{
+	required double double = 1;
+}
+
+message Str
+{
+	required string str = 1;
+}
+
+message Var
+{
+	optional int32 int = 1;
+	optional double double = 2;
+	optional string str = 3;
+}
+
+message XY
+{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+message XYZ
+{
+	required int32 x = 1;
+	required int32 y = 2;
+	required int32 z = 3;
+}
+
+message Pos
+{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+message ErrCode
+{
+	required int32 code = 1;
+	repeated string str = 2;
+}
+
+///////////////////////////////////////////////////////
+message IntArray
+{
+	repeated int32 int = 1;
+}
+
+message UintArray
+{
+	repeated uint32 uint = 1;
+}
+
+message DoubleArray
+{
+	repeated double double = 1;
+}
+
+message StrArray
+{
+	repeated string str = 1;
+}
+
+message VarArray
+{
+	repeated Var var = 1;
+}
